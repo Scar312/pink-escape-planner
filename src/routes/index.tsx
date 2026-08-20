@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle, ChevronDown } from "lucide-react";
-import brandLogo from "@/assets/airbnb-logo.webp.asset.json";
+import brandLogo from "@/assets/airbnb-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,6 +61,8 @@ function Index() {
           />
         </div>
       </header>
+
+      <div className="h-10 w-full bg-gradient-to-b from-primary to-background sm:h-12" />
 
       <div className="relative z-10 mx-auto max-w-lg px-4 pb-8 pt-8 text-center sm:px-5">
         <h1 className="text-3xl font-black leading-tight text-foreground sm:text-4xl md:text-5xl">

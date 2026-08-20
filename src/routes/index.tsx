@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle, ChevronDown } from "lucide-react";
-import brandLogo from "@/assets/airbnb-logo.webp.asset.json";
+import brandLogo from "@/assets/airbnb-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({

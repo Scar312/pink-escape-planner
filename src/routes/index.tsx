@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle, ChevronDown } from "lucide-react";
-import brandLogo from "@/assets/airbnb-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,6 +24,7 @@ export const Route = createFileRoute("/")({
 });
 
 const APPLY_URL = "https://linkthem.net/aff_c?offer_id=4438&aff_id=16139";
+const BRAND_LOGO_URL = "/airbnb-logo.png?v=3";
 
 const faqs = [
   {
@@ -55,9 +55,12 @@ function Index() {
       <header className="w-full bg-primary">
         <div className="flex h-56 sm:h-64 items-center justify-center px-4">
           <img
-            src={brandLogo.url}
-            alt="Airbnb"
+            src={BRAND_LOGO_URL}
+            alt="Airbnb logo"
             className="h-28 w-auto rounded-2xl sm:h-36"
+            width={200}
+            height={200}
+            fetchPriority="high"
           />
         </div>
       </header>
@@ -139,8 +142,8 @@ function Index() {
         <div className="mt-12 flex flex-col items-center gap-1 pb-8">
           <div className="flex items-center gap-2">
             <img
-              src={brandLogo.url}
-              alt="Airbnb"
+              src={BRAND_LOGO_URL}
+              alt="Airbnb logo"
               className="h-8 w-8 rounded-md"
               width={32}
               height={32}
